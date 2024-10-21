@@ -174,31 +174,31 @@ class WorkTwinsApp:
         grid_layout.addWidget(github_label, 0, 1)
         grid_layout.addWidget(self.github_username_input, 0, 2)
 
-        # GitLab username input with checkbox
-        self.gitlab_checkbox = QCheckBox()
-        self.gitlab_checkbox.setStyleSheet("""
-            QCheckBox::indicator {
-                width: 20px;
-                height: 20px;
-            }
-            QCheckBox::indicator:checked {
-                background-color: black;
-                border: 1px solid black;
-            }
-        """)
-        self.gitlab_checkbox.stateChanged.connect(self.toggle_gitlab_input)
-        self.gitlab_username_input = QLineEdit()
-        self.gitlab_username_input.mousePressEvent = self.enable_gitlab_checkbox
-        self.gitlab_username_input.setEnabled(False)
-        self.gitlab_username_input.setStyleSheet("font-size: 15pt; background-color: gray;")
+        # # GitLab username input with checkbox
+        # self.gitlab_checkbox = QCheckBox()
+        # self.gitlab_checkbox.setStyleSheet("""
+        #     QCheckBox::indicator {
+        #         width: 20px;
+        #         height: 20px;
+        #     }
+        #     QCheckBox::indicator:checked {
+        #         background-color: black;
+        #         border: 1px solid black;
+        #     }
+        # """)
+        # self.gitlab_checkbox.stateChanged.connect(self.toggle_gitlab_input)
+        # self.gitlab_username_input = QLineEdit()
+        # self.gitlab_username_input.mousePressEvent = self.enable_gitlab_checkbox
+        # self.gitlab_username_input.setEnabled(False)
+        # self.gitlab_username_input.setStyleSheet("font-size: 15pt; background-color: gray;")
 
-        gitlab_label = QLabel("GitLab Username:")
-        gitlab_label.mousePressEvent = lambda event: self.gitlab_checkbox.setChecked(not self.gitlab_checkbox.isChecked())
-        gitlab_label.setStyleSheet("font-size: 15pt; color: white;")
+        # gitlab_label = QLabel("GitLab Username:")
+        # gitlab_label.mousePressEvent = lambda event: self.gitlab_checkbox.setChecked(not self.gitlab_checkbox.isChecked())
+        # gitlab_label.setStyleSheet("font-size: 15pt; color: white;")
 
-        grid_layout.addWidget(self.gitlab_checkbox, 1, 0)
-        grid_layout.addWidget(gitlab_label, 1, 1)
-        grid_layout.addWidget(self.gitlab_username_input, 1, 2)
+        # grid_layout.addWidget(self.gitlab_checkbox, 1, 0)
+        # grid_layout.addWidget(gitlab_label, 1, 1)
+        # grid_layout.addWidget(self.gitlab_username_input, 1, 2)
 
         # Local Projects Folder selection with checkbox
         self.local_folder_checkbox = QCheckBox()
