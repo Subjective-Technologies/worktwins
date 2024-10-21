@@ -232,7 +232,7 @@ class SnapshotGenerator:
 # Common folders to avoid
 COMMON_AVOID_FOLDERS = [
     "node_modules", "venv", "env", "__pycache__", "site-packages", "myenv",
-    "target", "bin", "build", "obj", "vendor", ".next", "font", "animations", "package-lock","worktwins","com_worktwins_data_github","com_worktwins_data_gitlab"
+    "target", "bin", "build", "obj", "vendor", ".next","worktwins_env", "font", "animations", "package-lock","worktwins","com_worktwins_data_github","com_worktwins_data_gitlab","build"
 ]
 
 # Common files to avoid
